@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IND APPAREL - Premium Custom Jersey</title>
+    
+    <!-- Menggunakan Font dari Google untuk kesan Racing & Sporty -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Variables untuk Tema Dark Sporty */
+        :root {
+            --bg-dark: #0d0d0d;
+            --bg-card: #1a1a1a;
+            --accent-neon: #ff003c;
+            --text-light: #f4f4f4;
+            --text-dim: #a0a0a0;
+        }
+
+        /* Reset Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .brand-logo {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+        }
+
+        /* Navigasi */
+        nav {
+            background-color: var(--bg-card);
+            padding: 20px 40px;
+            border-bottom: 2px solid var(--accent-neon);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .brand-logo {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .brand-logo span {
+            color: var(--accent-neon);
+        }
+
+        /* Hero Section (Banner Utama) */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(13,13,13,1) 100%);
+            border-bottom: 1px solid #333;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-shadow: 0 0 15px rgba(255, 0, 60, 0.4);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-dim);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Katalog Produk */
+        .catalog {
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .catalog-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: var(--text-light);
+        }
+
+        .catalog-title span {
+            color: var(--accent-neon);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Kartu Produk (Etalase) */
+        .card {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #333;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 0, 60, 0.2);
+            border-color: var(--accent-neon);
+        }
+
+        .card-img-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-weight: 600;
+            /* Kamu bisa ganti tag div ini dengan tag <img> saat foto sudah siap */
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-dim);
+            margin-bottom: 20px;
+        }
+
+        /* Tombol Aksi */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-neon);
+            color: var(--text-light);
+            padding: 12px 24px;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #d40032;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--bg-card);
+            color: var(--text-dim);
+            font-size: 14px;
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi Atas -->
+    <nav>
+        <a href="#" class="brand-logo">IND <span>APPAREL</span></a>
+    </nav>
+
+    <!-- Bagian Hero Banner -->
+    <header class="hero">
+        <h1>GEAR UP. RIDE HARD.</h1>
+        <p>Spesialis jersey custom premium untuk Motocross, MTB, dan Racing. Desain agresif, material berkualitas, siap mendominasi sirkuit.</p>
+    </header>
+
+    <!-- Bagian Etalase Produk -->
+    <section class="catalog">
+        <h2 class="catalog-title">LATEST <span>COLLECTION</span></h2>
+        
+        <div class="grid">
+            <!-- Produk 1 -->
+            <div class="card">
+                <!-- Ganti div di bawah ini dengan <img src="link-foto.jpg" alt="Jersey Motocross Motif Geometri Clean"> -->
+                <div class="card-img-placeholder">[ Foto Jersey Motocross Geometri Clean ]</div>
+                <div class="card-content">
+                    <h3 class="card-title">Stealth X Motocross</h3>
+                    <p class="card-desc">Desain pola geometri tajam, warna solid yang sporty. Tampilan bersih tanpa ornamen berlebih.</p>
+                    <a href="https://shopee.co.id/" class="btn" target="_blank">ORDER VIA SHOPEE</a>
+                </div>
+            </div>
+
+            <!-- Produk 2 -->
+            <div class="card">
+                <div class="card-img-placeholder">[ Foto Jersey MTB Motif Alam & Gunung ]</div>
+                <div class="card-content">
+                    <h3 class="card-title">Apex Trail MTB</h3>
+                    <p class="card-desc">Ilustrasi siluet gunung dan pepohonan dengan sentuhan warna gelap yang elegan.</p>
+                    <a href="https://shopee.co.id/" class="btn" target="_blank">ORDER VIA SHOPEE</a>
+                </div>
+            </div>
+
+            <!-- Produk 3 -->
+            <div class="card">
+                <div class="card-img-placeholder">[ Foto Jersey Racing Polos ]</div>
+                <div class="card-content">
+                    <h3 class="card-title">Neon Dash Racing</h3>
+                    <p class="card-desc">Jersey balap minimalis dengan aksen neon. Ruang luas untuk menempatkan logo sponsor.</p>
+                    <a href="https://shopee.co.id/" class="btn" target="_blank">ORDER VIA SHOPEE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 IND APPAREL. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
